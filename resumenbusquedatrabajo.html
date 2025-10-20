@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Federico Ariel Billordo - Programador Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.5;
+            padding: 15px;
+            min-height: 100vh;
+            border-radius: 8px;
+          
+            margin: 20px auto;
+                border-radius: 10px;
+  max-width: 1200px;
+  margin: 90px auto;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .employment-banner {
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            font-size: 1rem;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+        
+        .employment-banner i {
+            margin: 0 8px;
+            font-size: 1.1rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 25px 20px;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .logo-container {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            border: 3px solid white;
+            flex-shrink: 0;
+        }
+        
+        .logo-container i {
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .name-title {
+            text-align: left;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #4ecdc4;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        
+        .content-section {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #4ecdc4, #45b7d1);
+        }
+        
+        .content-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid;
+            border-image: linear-gradient(90deg, #667eea, #764ba2) 1;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        
+        h3 {
+            color: #4ecdc4;
+            margin: 15px 0 10px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.4;
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: #555;
+            position: relative;
+            padding-left: 8px;
+            line-height: 1.4;
+        }
+        
+        li::before {
+            content: '▸';
+            color: #4ecdc4;
+            font-weight: bold;
+            position: absolute;
+            left: -12px;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        
+        .business-model {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .business-model h3 {
+            color: white;
+            text-align: center;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .benefit-card i {
+            font-size: 1.8rem;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-card h4 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .benefit-card p {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+        }
+        
+        .pricing-options {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            gap: 15px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 10px;
+            padding: 18px;
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: 2px solid #4ecdc4;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card.recommended {
+            border-color: #ff6b6b;
+            transform: scale(1.02);
+        }
+        
+        .pricing-card.recommended::before {
+            content: 'RECOMENDADO';
+            position: absolute;
+            top: 12px;
+            right: -25px;
+            background: #ff6b6b;
+            color: white;
+            padding: 3px 25px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            transform: rotate(45deg);
+        }
+        
+        .pricing-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .pricing-card.recommended:hover {
+            transform: scale(1.05);
+        }
+        
+        .pricing-card h4 {
+            color: #667eea;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .feature-list {
+            text-align: left;
+            margin: 15px 0;
+        }
+        
+        .feature-item {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.85rem;
+            line-height: 1.3;
+        }
+        
+        .feature-item.positive::before {
+            content: '✓';
+            color: #4ecdc4;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .feature-item.negative::before {
+            content: '✗';
+            color: #ff6b6b;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .skill-category {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 15px;
+            border-left: 4px solid #4ecdc4;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-3px);
+        }
+        
+        .skill-item {
+            margin-bottom: 12px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .skill-title {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+        
+        .education-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .education-item:hover {
+            transform: translateX(3px);
+        }
+        
+        .education-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .education-details {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .progress-container {
+            width: 100%;
+            background-color: rgba(102, 126, 234, 0.1);
+            border-radius: 8px;
+            margin-top: 8px;
+            overflow: hidden;
+            height: 10px;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #4ecdc4, #45b7d1);
+            border-radius: 8px;
+            width: 85%;
+            transition: width 1.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-image: linear-gradient(
+                -45deg, 
+                rgba(255, 255, 255, 0.2) 25%, 
+                transparent 25%, 
+                transparent 50%, 
+                rgba(255, 255, 255, 0.2) 50%, 
+                rgba(255, 255, 255, 0.2) 75%, 
+                transparent 75%, 
+                transparent
+            );
+            background-size: 40px 40px;
+            animation: moveStripes 2s linear infinite;
+        }
+        
+        .progress-text {
+            text-align: center;
+            margin-top: 5px;
+            font-size: 0.8rem;
+            color: #667eea;
+            font-weight: 500;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 15px;
+            gap: 10px;
+        }
+        
+        .contact-item {
+            flex: 1;
+            min-width: 180px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-item i {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #4ecdc4;
+        }
+        
+        .contact-item p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+        }
+        
+        .quote {
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            border-left: 4px solid #ff6b6b;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            font-size: 1rem;
+            color: #555;
+            position: relative;
+        }
+        
+        .quote::before {
+            content: '"';
+            font-size: 3rem;
+            color: #ff6b6b;
+            position: absolute;
+            top: 5px;
+            left: 15px;
+            opacity: 0.3;
+        }
+        
+        .cv-notice {
+            text-align: center;
+            padding: 15px;
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 10px;
+            margin: 15px 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .specialization-notice {
+            text-align: center;
+            padding: 15px;
+            background: linear-gradient(120deg, #ffd89b 0%, #19547b 100%);
+            color: white;
+            border-radius: 10px;
+            margin: 15px 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            font-size: 0.85rem;
+            color: #777;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes moveStripes {
+            0% { background-position: 0 0; }
+            100% { background-position: 40px 40px; }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.01); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                margin: 10px auto;
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .employment-banner {
+                font-size: 0.9rem;
+                padding: 8px 15px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .name-title {
+                text-align: center;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content-section {
+                padding: 15px;
+            }
+            
+            .pricing-options {
+                flex-direction: column;
+            }
+            
+            .pricing-card {
+                min-width: 100%;
+            }
+            
+            .pricing-card.recommended {
+                transform: scale(1);
+            }
+            
+            .pricing-card.recommended:hover {
+                transform: scale(1.02);
+            }
+        }
+
+.foto-profesional {
+    width: 250px;        /* tamaño medio */
+    height: 250px;       /* mantiene proporción circular */
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #F0F4F8;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg, #4A90E2, #50E3C2, #B8E986);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-image-source 2s ease;
+    animation: cambio-colores 6s infinite alternate;
+  }
+
+  @keyframes cambio-colores {
+    0% {
+      border-image-source: linear-gradient(45deg, #4A90E2, #50E3C2, #B8E986);
+    }
+    25% {
+      border-image-source: linear-gradient(45deg, #FF6B6B, #FFD93D, #6BCB77);
+    }
+    50% {
+      border-image-source: linear-gradient(45deg, #9B59B6, #3498DB, #1ABC9C);
+    }
+    75% {
+      border-image-source: linear-gradient(45deg, #F39C12, #E74C3C, #8E44AD);
+    }
+    100% {
+      border-image-source: linear-gradient(45deg, #4A90E2, #50E3C2, #B8E986);
+    }
+  }
+
+  .foto-profesional:hover {
+    transform: scale(1.07);                  
+    box-shadow: 0 18px 40px rgba(0,0,0,0.3);
+  }
+   .btn-volver {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white; /* color del texto */
+    background: linear-gradient(45deg, #ff6b6b, #feca57); /* fondo degradado llamativo */
+    border: 3px solid #ff6b6b; /* borde visible */
+    border-radius: 12px; /* bordes redondeados */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+
+  .btn-volver:hover {
+    background: linear-gradient(45deg, #feca57, #ff6b6b);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <!-- Banner de búsqueda de empleo -->
+        <div class="employment-banner">
+            <i class="fas fa-video"></i>
+          BUSCO TRABAJO REMOTO DE EMPLEO ONLINE CON ZOOM O MEET
+            <i class="fas fa-laptop-house"></i>
+        </div>
+        <button class="btn-volver" onclick="window.location.href='index.html'">
+  Volver atrás
+</button>
+        <header>
+            <div class="header-content">
+                <div class="logo-container">
+                    <i class="fas fa-code"></i>
+                </div><img src="fotoperfil.jpg" alt="" class="foto-profesional">
+                <div class="name-title">
+                    <h1>Federico Ariel Billordo</h1> 
+     <div class="subtitle">Desarrollador Web Especializado</div>
+     <h4>
+        BUSCO TRABAJO REMOTO DE EMPLEO ONLINE CON ZOOM O MEET
+     </h4>
+
+
+<div style="text-align: center; margin-top: 20px;">
+  <img src="fotodescarga.jpg" alt="Foto" style="width: 250px; border-radius: 15px; border: 3px solid #444;">
+  <p style="font-size: 18px; color: #333; margin-top: 10px;">
+    Podés descargar y compartir esta foto con otras personas.<br>
+    ¡Muchas gracias por la ayuda en mi búsqueda laboral!
+  </p>
+
+  <a href="fotodescarga.jpg" download 
+     style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #333; color: white; font-weight: bold; text-decoration: none; border-radius: 10px; transition: 0.3s;">
+    Descargar foto
+  </a>
+</div>
+
+<style>
+a:hover {
+  background-color: #555; /* un poco más claro al pasar el mouse */
+}
+</style>
+
+
+
+                </div>
+            </div>
+        </header>
+      
+        <!-- Secciones compactas -->
+        <section class="content-section">
+            <h2>Estudios</h2>
+            <div class="education-item">
+                <div class="education-title">Título Secundario Completo</div>
+                <div class="education-details">Educación secundaria finalizada</div>
+            </div>
+            <div class="education-item">
+                <div class="education-title">Carrera de Programación (En curso)</div>
+                <div class="education-details">Actualmente cursando - 7 materias restantes</div>
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="progress-text">Progreso: Avanzado (85% completado)</div>
+            </div>
+        </section>
+        
+        <section class="content-section">
+            <h2>Propuesta de Negociación</h2>
+            <div class="business-model">
+                <h3>Modelo de Servicio Beneficioso para Todos</h3>
+                <p style="color: white; text-align: center; font-size: 1rem;">
+                    Desarrollo sitios web que maximizan el potencial publicitario
+                </p>
+            </div>
+            
+            <p>Mi propuesta es desarrollar el sitio web para que aprovechen al máximo las habilidades publicitarias y rendimiento digital. Los clientes acceden gratis sin costos adicionales.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h4>Desarrollo Completo</h4>
+                    <p>Sitio web profesional según necesidades</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-users"></i>
+                    <h4>Clientes Gratuitos</h4>
+                    <p>Acceso gratuito para clientes</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Máximo Rendimiento</h4>
+                    <p>Optimización continua</p>
+                </div>
+            </div>
+            
+            <h3>Modelo de Pago Flexible</h3>
+            
+            <div class="pricing-options">
+                <div class="pricing-card recommended">
+                    <h4>Plan Mensual</h4>
+                    <i class="fas fa-shield-alt" style="font-size: 2rem; color: #4ecdc4; margin: 10px 0;"></i>
+                    <p><strong>Mantenimiento continuo y soporte técnico</strong></p>
+                    <div class="feature-list">
+                        <div class="feature-item positive">Contratación de otros sitios web para mejoras nuestra plataforma web</div>
+                        <div class="feature-item positive">Seguridad y privacidad garantizadas</div>
+                        <div class="feature-item positive">Actualizaciones y mejoras continuas</div>
+                      
+                    </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <h4>Plan por Hora</h4>
+                    <i class="fas fa-clock" style="font-size: 2rem; color: #4ecdc4; margin: 10px 0;"></i>
+                    <p><strong>Flexibilidad para proyectos específicos</strong></p>
+                    <div class="feature-list">
+                        <div class="feature-item positive">Cambios puntuales y ajustes</div>
+                        <div class="feature-item positive">Modificación de diseño y contenido</div>
+                        <div class="feature-item negative">Seguridad no garantizada</div>
+                        <div class="feature-item negative">Sin mantenimiento continuo</div>
+                        <div class="feature-item negative">Sin mejoras y no se contrata otros sitio web para mejor sea la plataforma web de la empresa u organizacion</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-section">
+            <h2>Habilidades y Cursos</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Formación Técnica</h3>
+                    <div class="skill-item">
+                        <div class="skill-title">Fundamentos de Programación</div>
+                        <div>Curso completado en programación</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-title">Desarrollo Web</div>
+                        <div>Creación de sitios web profesionales</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Conocimientos Complementarios</h3>
+                    <div class="skill-item">
+                        <div class="skill-title">Derecho Penal</div>
+                        <div>Curso especializado en derecho penal</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="specialization-notice">
+                <p><i class="fas fa-exclamation-circle"></i> <strong>Especialización:</strong> Solo desarrollo web. No servicios de configuración de PC remotos.</p>
+            </div>
+        </section>
+        
+        <section class="content-section">
+            <h2>Objetivo Profesional</h2>
+            <p>Busco trabajo remoto para empresas en <span class="highlight">España</span>, no en Argentina. Solo puedo comunicarme en español similar al de Argentina.</p>
+        </section>
+        
+        <section class="content-section">
+            <h2>Proyecto Profesional</h2>
+            <p>He desarrollado un proyecto profesional que incluye:</p>
+            <ul>
+                <li>Herramientas de presentación (CV, portadas, eventos)</li>
+                <li>Editor de video y juegos educativos</li>
+                <li>Creación de logos y personalización completa</li>
+            </ul>
+        </section>
+        
+        <section class="content-section">
+            <h2>Enfoque Profesional</h2>
+            <p>Enfoque profesional y educativo con manual de instrucciones. Incluye seguridad, monitoreo y control de datos garantizando legalidad.</p>
+        </section>
+        <table border="1" cellpadding="8" cellspacing="0" style="background-color: rgba(255, 255, 255, 0.8);">
+    <tr>
+        <td>       <p>La vida es un aprendizaje constante. Cada desafío enseña a mejorar y encontrar soluciones creativas con ética y responsabilidad.</p>
+       
+   </td>
+    </tr>
+</table>
+
+    
+
+<table border="1" cellpadding="8" cellspacing="0" style="background-color: rgba(255, 255, 255, 0.8);">
+    <tr>
+        <td>
+            Actualmente tengo 26 años y estoy disponible solo ciertos días de la semana, principalmente lunes, martes y miércoles, preferentemente por la mañana. Por las tardes estoy ocupado con otros compromisos. Estos días puedo dedicarme de manera completa al empleo remoto, garantizando un buen desempeño en las tareas asignadas. Los jueves, viernes, sábado y domingo los reservo para descansar y atender otras responsabilidades personales, de manera que pueda mantener un buen equilibrio y rendir al máximo durante los días de trabajo.
+        </td>
+    </tr>
+</table>
+<table border="1" cellpadding="8" cellspacing="0" style="background-color: rgba(255, 255, 255, 0.8);">
+
+   <tr>
+        <td>
+                     <p>
+
+Puedes visitar mi sitio web para conocer más sobre mí y compartirlo con cualquier persona. ¡Tu apoyo me ayudaría mucho!
+Tengo completos mis estudios primarios y secundarios, y estoy estudiando la carrera universitaria o terciaria. Siempre busco empleo y trabajo remoto online, esforzándome por crecer académicamente del laburo.
+Algunas personas no muestran la misma iniciativa: no estudian, no trabajan y muchas mujeres  hacen falsas denuncias en la comisaría por dinero, afectando a personas inocentes. Tambien esa mujeres se dedican únicamente a quedarse en casa, sin estudios ni empleo.
+
+
+ </p>  
+        
+        </td>
+    </tr>
+</table>
+
+      
+        <section class="content-section">
+           <h3>   los contactos para comunicarse al empleado</h3>
+              
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+ <span>federicobillordo5@gmail.com</span>
+
+                </div>
+              <div>
+
+
+
+
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Soy Argentino </p>
+                </div>
+            </div>
+            <button onclick="window.open('https://www.linkedin.com/in/federico-billor7-3b968338b', '_blank')"
+        style="
+          background-color: #E0F7FA;   /* fondo claro */
+          color: #0077B5;              /* texto azul LinkedIn */
+          border: 2px solid #0077B5;   /* borde azul */
+          border-radius: 8px;           /* esquinas redondeadas */
+          padding: 10px 20px;           /* espacio dentro del botón */
+          font-size: 16px;              /* tamaño de letra */
+          font-weight: bold;            /* texto en negrita */
+          cursor: pointer;              /* puntero al pasar el mouse */
+          transition: all 0.3s ease;   /* transición para efecto hover */
+        "
+        onmouseover="this.style.backgroundColor='#B2EBF2'; this.style.color='#004C7F';"
+        onmouseout="this.style.backgroundColor='#E0F7FA'; this.style.color='#0077B5';">
+Acede al linkedin
+</button>
+   
+     <div style="display: flex; align-items: flex-start; gap: 10px; margin: 10px 0;">
+    <i class="fas fa-phone" style="font-size: 24px; color: #25D366; margin-top: 4px;"></i>
+    <a href="https://wa.me/543624838162" target="_blank" style="
+        text-decoration: none; 
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 10px 14px;
+        background-color: bisque;
+        color: black;
+        border-radius: 12px;
+        font-size: 16px;
+        line-height: 1.4;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    " onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+        📱 <span>+54 362 4838162</span>
+        <span style="font-size: 14px;">Si deseas contactarme rápidamente, puedes escribirme por WhatsApp al mismo número o por Telegram. Estoy disponible solo a la mañana.</span>
+    </a>
+</div>
+
+     
+        </section>
+        
+      
+    </div>
+
+    <script>
+        // Animación para la barra de progreso
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBar = document.querySelector('.progress-bar');
+            setTimeout(() => {
+                progressBar.style.width = '85%';
+            }, 500);
+        });
+
+
+  const waLink = document.querySelector('a');
+  waLink.onmouseover = () => waLink.style.transform = 'scale(1.05)';
+  waLink.onmouseout = () => waLink.style.transform = 'scale(1)';
+   
+    </script>
+</body>
+</html>

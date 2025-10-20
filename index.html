@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación Profesional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+                border-radius: 10px;
+  max-width: 1200px;
+  margin: 90px auto;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .header {
+            background: linear-gradient(to right, #0f62fe, #8a2be2);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #0f62fe;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-info h2 {
+            color: #0f62fe;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #f472b6;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+
+        .profile-info p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .message-box {
+            background: linear-gradient(135deg, #e0f2ff, #fef0ff);
+            border-radius: 15px;
+            padding: 30px;
+            border: 3px solid;
+            border-image: linear-gradient(to right, #0f62fe, #f472b6) 1;
+            box-shadow: 0 8px 20px rgba(15, 98, 254, 0.15);
+        }
+
+        .message-box h3 {
+            color: #0f62fe;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .message-box h3 i {
+            color: #f472b6;
+        }
+
+        .message-content {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .message-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .message-content strong {
+            color: #0f62fe;
+        }
+
+        .footer {
+            background: linear-gradient(to right, #0f62fe, #8a2be2);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+            
+           <p>
+Puedes visitar mi sitio web para conocer más sobre mí y compartirlo con cualquier persona. ¡Tu apoyo me ayudaría mucho!
+Tengo completos mis estudios primarios y secundarios, y estoy estudiando la carrera universitaria o terciaria. Siempre busco empleo y trabajo remoto online, esforzándome por crecer académicamente del laburo.
+Algunas personas no muestran la misma iniciativa: no estudian, no trabajan y muchas mujeres  hacen falsas denuncias en la comisaría por dinero, afectando a personas inocentes. Tambien esa mujeres se dedican únicamente a quedarse en casa, sin estudios ni empleo.
+<p >
+    Podés descargar y compartir esta foto con otras personas.<br>
+    ¡Muchas gracias por la ayuda en mi búsqueda laboral!
+  </p>
+<div style="text-align: center; margin-top: 20px;">
+
+  <a href="fotodescarga.jpg" download 
+     style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #2196F3; color: white; font-weight: bold; text-decoration: none; border-radius: 10px; transition: 0.3s;">
+   Ver y  Descargar foto
+  </a>
+</div>
+
+
+ </p>  
+               <h2> BUSCO TRABAJO REMOTO DE EMPLEO ONLINE CON ZOOM O MEET </h2>
+            </div>
+
+            <div class="content">
+                <div class="profile-section">
+              
+                    
+                    <div class="profile-info">
+                      
+                        <p>Me llamo Federico  Billordo, soy programador, no me recibí porque me faltan 7 materias para recibir como programador profesional estudio en instituto privado. Después, cuando tenga el título universitario de pogramacion, voy a hacer la carrera de abogacía porque me gusta defender lo comercial, empresarial y financiero. Por eso quiero completar esa carrera de abogacía. </p>
+                
+                       </div> 
+   <img src="fotoperfil.jpg" 
+     alt="Foto de perfil" 
+     class="profile-img" 
+     style="
+        width: 300px; 
+        height: 300px; 
+        border-radius: 20px; 
+        border: 3px solid #1E90FF; 
+        box-shadow: 0 6px 12px rgba(0,0,0,0.2); 
+        object-fit: cover;
+        display: block; 
+        margin: 0 auto;
+     ">
+
+
+
+                </div>
+
+
+                <div class="message-box">
+                   
+                    <div class="message-content">
+                        <p><strong>Señores y señoras:</strong></p>
+
+                      <p>
+                        Busco trabajo pero quiero trabajar haci online como empleado, acepto desde el país España  y con personas de países como Bolivia, Paraguay u otros donde se utilice un español similar al de Argentina. con esas empresas que quieren un programador web. Si realmente no saben la programación qué significa, bueno, yo tengo un buen proyecto que estoy  creando todavia no termine pero estoy avanzando, que es un sitio web haci profesional, está lo adecuado como podrá acceder a las herramientas, presentación, como podrá ahí seleccionar el currículum vitae, una presentación de portada o unos eventos. 
+                      </p>
+                      <p>
+                        Todo eso podrá ser haci muchas cosas espectaculares para tu empresa u organizacion, hasta podrá ser famoso porque le va a encantar a la persona, como el editor de video profesional, como juegos educativos, unos conocimientos adecuados de todo tipo, hasta también muchas cosas de arte: crear logos, crear una foto, subir ahí, crear muchas fotos de una, como cuadrado, estará como 50 fotos de una. Eso sería para que muchas personas accedan a esto, para más de imprimir logos, hay ventas de logos
+                      </p>
+                      <p>
+                        En la web habrá seguridad y monitoreo. Los visitantes del sitio podrán poner enlaces y escanear otros sitios web; eso significa que otras personas podrán conocer la ubicación del titular y la información que se quiera saber. Podrán acceder a juegos educativos para el aprendizaje psicológico, crear su propia web y modificar todo de forma personalizada. Los visitantes tendrán prioridad para publicar su web en GitHub, obteniendo así un enlace que podrán compartir con otros. Nuestra web permitirá extraer todos los códigos HTML, CSS y JS completos para publicar en GitHub. Además, podrán modificar marcos, descargar su marco personal y crear códigos QR para compartir con restaurantes, educación y otros servicios.
+                      </p>
+                      <p>
+                        En el sitio web va  estar conocimientos adquiridos que haci sería como algo  inteligente en la vida es un aprendizaje constante, donde cada desafío nos enseña a mejorar, a comprender mejor a los demás y a nosotros mismos, y a encontrar soluciones creativas para avanzar con la actitud  con el grupo de cada comunidad, ya sea empresa u organización. Sabemos que el conocimiento ayuda a unir a todos y a apoyar entre grupos; desde abogacía, tecnología, contabilidad, hasta redes sociales e inteligencia artificial, siempre con coherencia y organización. La programación, la carrera universitaria o los cursos se explicarán adecuadamente, mientras que las diversas ramas de la empresa u organización pueden colaborar para expandir el conocimiento. El sitio web que diseñaré incluirá todos estos datos de aprendizaje; aunque requerirá almacenamiento grande, respaldo y organización profesional, usaré discos internos y externos para mantener todo limpio y eficiente. 
+                      </p>
+                      <p>
+                        Eso sí, si quieren, podemos negociar todo eso, pero a todo eso me refiero a ser gratis, pero ustedes me pagan por los horarios, días o hasta meses por lo que hago. Pero ahí voy a gastar todo lo que es dominio, hosting, hasta poner la responsabilidad de hacer la legalidad de la web. Voy a ir al sitio web del gobierno que dice protección propiedad intelectual, ahí entro yo para ser lo legal en ese sitio web.
+Ese proyecto va a ver en la vida que revolucionó su empresa porque le va a gustar a las personas que son de buena salud mental.
+
+                      </p>
+                      <p>
+                        Pero ahora digo, a veces también hay personas que andan mal de la salud mental, como las adultas o mujeres que les encanta discutir por algo que no entienden muy bien lo digital. Por esa razón voy a poner ayudar a salir con esos conocimientos adecuados como psicología digital, qué oculta la policía y qué ocultan las otras grandes empresas todo es régimen legal.
+                      </p>
+                      <p>
+                        También quiero aclarar que no tengo conocimientos adecuados de idioma como inglés o portugués, así que con otros países como Estados Unidos, Italia u otros no podré entender. Pero con los españoles de España sí podré entender perfectamente.
+                      </p>
+                      <p>
+                        A todo esto, acá dejo mi email: federicobillordo5@gmail.com, mi número celular 3624838162. El país en el que vivo es Argentina. No voy a decir la mayoría de los datos porque si me interesa su negocio podrá ser que acepte o rechace hasta que tenga en cuenta si es legal esa empresa. El trabajo laburo lo que busco de una empresa u organización que sea legal que era ninguna documentación falsa del registro del contrato adecuado. 
+                      </p>
+                      <h3>
+                        La negociacion legales se discute en privado porque es confidencial
+                      </h3>
+                      <h3>
+                             Plan Mensual
+                      </h3>
+                      <p>
+                   
+Brindo mantenimiento continuo y soporte técnico permanente. También realizo contrataciones en otros sitios web para mejorar el rendimiento y la seguridad de las plataformas. Garantizo la privacidad de los datos y ofrezco actualizaciones y mejoras constantes, todo con cobro mensual.
+                      </p>
+<h3>
+    Plan por Hora
+</h3>
+                      <p>
+
+Ofrezco flexibilidad para proyectos específicos, realizando cambios puntuales y ajustes según las necesidades del cliente. Incluye modificaciones de diseño y contenido.
+La seguridad no está garantizada, no se incluye mantenimiento continuo ni mejoras, y no se realizan contrataciones en otros sitios web para optimizar la plataforma de la empresa u organización.
+                      </p>
+<p>
+    Para poder evaluar tu solicitud necesito que me envíes un video de YouTube del lugar donde trabajás, el nombre y apellido del jefe, fotos del entorno y las redes sociales como Facebook, Instagram, Twitter y LinkedIn. Con toda esa información voy a revisar si acepto o rechazo el proyecto. Además, decime si te gustó mi proyecto o no. Si tenés otra idea, enviá una descripción junto con un video privado desde OneDrive o Google Drive, así puedo ver de qué se trata el tema que querés desarrollar, siempre que sea legal y no implique difundir contenido íntimo, fotos o videos desnudos, grooming u otros ciberdelitos; a ese tipo de proyectos no los acepto, por lo que es mejor no enviarlos. También necesito saber cuál sería el beneficio y cuánto cobraría por lo que hago en ese proyecto o sitio web que deseen.
+</p>
+<p>
+    Aclaro que una organización puede ser un grupo educativo o profesional, como docentes de biología, química, educación física, matemática, literatura o de otras ramas, así como abogados o personas del ámbito político, y no necesariamente una comunidad social. En cambio, una empresa es cuando hay varios grupos de personas, profesionales o no, como en instituciones o escuelas que contratan a diferentes trabajadores, ya que no se trata de algo individual sino de un conjunto organizado.
+</p>
+<p>
+    Mi proyecto será gratis porque muchas personas valoran lo gratuito en distintos ámbitos de la sociedad. Esto hace que el sitio web gane más importancia y utilidad, y el beneficio principal es que no se trata de obsesionarse por el dinero, sino de ofrecer un proyecto que realmente aporte valor a la comunidad. De todo mi proyecto, solamente acepto empresas que ofrezcan beneficios legales, y las negociaciones deben realizarse de manera formal mediante Zoom o Google Meet.
+
+
+
+
+
+</p>
+<h4>
+   ¿queres saber algo de mi y quién soy? 
+</h4>
+<p>
+    En la secundaria viví momentos muy difíciles debido al bullying. Me tiraban papeles, me insultaban y me atacaban incluso usando medios digitales. A pesar de todo, nunca respondí con violencia; enfrenté la situación con calma e inteligencia, entendiendo que esas personas tenían problemas personales y mentales.
+</p>
+<p>
+    Siempre fui un alumno responsable y comprometido: entregaba trabajos a tiempo, estudiaba con dedicación y daba lo mejor de mí, lo que hacía que profesores y profesoras me admiraran. Incluso en circunstancias difíciles, como ir a la escuela bajo la lluvia, demostraba que actuar con responsabilidad y hacer las cosas bien es parte de la vida
+</p>
+<p>
+    Desde mi infancia hasta la adolescencia, jugué al básquet, desde los 4 hasta los 14 años. Dejé de jugar porque sentí que ya no tenía la misma actitud y motivación que antes, aunque siempre guardo un gran recuerdo de ese club. Formamos un gran equipo y logramos ser subcampeones; incluso mi profesor dio una entrevista sobre ese logro. No necesito mostrarla, porque para mí es simplemente un resumen importante de mi vida y mis experiencias.
+</p>
+<p>
+    En 2021 comencé a estudiar programación en un instituto privado. Aunque aún me faltan materias para recibirme, actualmente, en 2025, estoy buscando trabajo exclusivamente en modalidad remota, aplicando todo lo aprendido y con ganas de seguir creciendo profesionalmente.
+</p>
+<p>
+    Soy una persona apasionada por la tecnología y la programación, enfocada en el desarrollo de páginas web legales, comprometida con la innovación, el aprendizaje constante y la excelencia profesional. Valoro la sinceridad y la transparencia en todos los ámbitos digitales, buscando siempre actuar con integridad. Enfrento los desafíos con objetivos claros, manteniendo la calma frente a la adversidad mientras me concentro en soluciones efectivas. La constancia, el estudio, la creatividad y la disciplina son fundamentales para alcanzar la excelencia, mientras que la dignidad guía mis decisiones y proyectos.
+</p>
+<p>
+    Me esfuerzo por contribuir a entornos más seguros y justos, aplicando conocimiento, rigor y compromiso profesional en cada tarea. Busco generar un impacto positivo, impulsando avances tecnológicos y soluciones prácticas que beneficien tanto a individuos como a organizaciones, siempre con respeto, empatía y dignidad.
+</p>
+<p>
+    Además, cuento con conocimientos sólidos en derechos informáticos, financieros, comerciales y empresariales, y estoy finalizando la carrera de programación; me faltan siete materias que voy a completar para recibirme como programador, y después estudiaré la carrera abogacía.
+</p>
+<p>
+    
+Actualmente tengo 26 años y estoy disponible solo ciertos días de la semana, principalmente lunes, martes y miércoles, preferentemente por la mañana. Por las tardes estoy ocupado con otros compromisos. Estos días puedo dedicarme de manera completa al empleo remoto, garantizando un buen desempeño en las tareas asignadas. Los jueves, viernes, sábado y domingo los reservo para descansar y atender otras responsabilidades personales, de manera que pueda mantener un buen equilibrio y rendir al máximo durante los días de trabajo.
+</p>
+<button onclick="window.location.href='resumenbusquedatrabajo.html'"
+        style="
+          background-color: #E0F7FA;   /* fondo claro */
+          color: #0077B5;              /* texto azul */
+          border: 2px solid #0077B5;   /* borde azul */
+          border-radius: 6px;           /* esquinas un poco redondeadas */
+          padding: 6px 12px;            /* menos espacio dentro del botón */
+          font-size: 14px;              /* tamaño de letra más compacto */
+          font-weight: bold;            
+          cursor: pointer;
+          transition: all 0.3s ease;
+        "
+        onmouseover="this.style.backgroundColor='#B2EBF2'; this.style.color='#004C7F';"
+        onmouseout="this.style.backgroundColor='#E0F7FA'; this.style.color='#0077B5';">
+  Ver mi resumen completo
+</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <h3>   los contactos para comunicarse al empleado</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>federicobillordo5@gmail.com</span>
+                    </div>
+       
+
+<div style="display: flex; align-items: flex-start; gap: 10px; margin: 10px 0;">
+    <i class="fas fa-phone" style="font-size: 24px; color: #25D366; margin-top: 4px;"></i>
+    <a href="https://wa.me/543624838162" target="_blank" style="
+        text-decoration: none; 
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 10px 14px;
+        background-color: bisque;
+        color: black;
+        border-radius: 12px;
+        font-size: 16px;
+        line-height: 1.4;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    " onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+        📱 <span>+54 362 4838162</span>
+        <span style="font-size: 14px;">Si deseas contactarme rápidamente, puedes escribirme por WhatsApp al mismo número o por Telegram. Estoy disponible solo a la mañana.</span>
+    </a>
+</div>
+       <button onclick="window.open('https://www.linkedin.com/in/federico-billor7-3b968338b', '_blank')"
+        style="
+          background-color: #E0F7FA;   /* fondo claro */
+          color: #0077B5;              /* texto azul LinkedIn */
+          border: 2px solid #0077B5;   /* borde azul */
+          border-radius: 8px;           /* esquinas redondeadas */
+          padding: 10px 20px;           /* espacio dentro del botón */
+          font-size: 16px;              /* tamaño de letra */
+          font-weight: bold;            /* texto en negrita */
+          cursor: pointer;              /* puntero al pasar el mouse */
+          transition: all 0.3s ease;   /* transición para efecto hover */
+        "
+        onmouseover="this.style.backgroundColor='#B2EBF2'; this.style.color='#004C7F';"
+        onmouseout="this.style.backgroundColor='#E0F7FA'; this.style.color='#0077B5';">
+Acede al linkedin
+</button>
+                  
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span> soy Argentino</span>
+                    
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+  const waLink = document.querySelector('a');
+  waLink.onmouseover = () => waLink.style.transform = 'scale(1.1)';
+  waLink.onmouseout = () => waLink.style.transform = 'scale(1)';
+</script>
